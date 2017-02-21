@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>狼人杀</title>
+    <style>
+        body{
+            background-color: #330000;
+            margin: 0;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .content{
+            margin: 10px auto;
+            width: 80%;
+            border: 2px #989898 solid;
+            background-image: url(img/werewolves.jpg);
+            background-position: center;
+            background-size: auto;
+            box-shadow: 0 2px #888888;
+            border-radius: 5px;
+        }
+
+        .create_game {
+            background-color: #A0A0A0;
+            width: 97%;
+            height: 60px;
+            font-size: 32px;
+            line-height: 100%;
+            margin: 100px auto 30px;
+            color: #FFFFFF;
+        }
+
+        .type_room_number {
+            background: #fff;
+            width: 90%;
+            height: 60px;
+            font-size: 22px;
+            line-height: 100%;
+            margin: 100px auto 30px;
+        }
+
+        .confirm_button {
+            background-color: #A0A0A0;
+            margin: auto auto 50px;
+            font-size: 22px;
+            color: #FFFFFF;
+        }
+
+
+        .main_btn {
+            border: 2px #A0A0A0 solid;
+            box-shadow: 0 1px 2px #A0A0A0;
+            border-radius: 10px;
+            text-align: center;
+            display: block;
+            -webkit-appearance: none;
+            opacity: 0.4;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+<div class="content">
+    <a href="/configuration.html"><button class="main_btn create_game">创建游戏</button></a>
+    <input id = "room" class="main_btn type_room_number" type = "text" placeholder = "已有房间，请输入号码">
+    <button class="main_btn confirm_button" onclick = "join()">加入房间</button>
+</div>
+<script>
+        var join = function (){
+            var number = document.getElementById("room").value;
+            window.location.href = "/message.html?join&" + number;
+        };
+    </script>
+</body>
+</html>

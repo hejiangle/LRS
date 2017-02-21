@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body{
+            background-color: #330000;
+            margin: 0;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .title{
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            color: #A0A0A0;
+        }
+
+        .content{
+            margin: 10px auto;
+            width: 80%;
+            border: 2px #989898 solid;
+            background-image: url(img/werewolves.jpg);
+            background-position: center;
+            background-size: auto;
+            box-shadow: 0 2px #888888;
+            border-radius: 5px;
+        }
+
+        .form{
+            margin: 10px;
+            color: #A0A0A0;
+            font-size: 22px;
+        }
+
+        table{
+            margin: 10px auto;
+            vertical-align: central;
+            height: 45px;
+            width: 90%
+            line-height: 45px;
+        }
+
+        td{
+            padding: 5px 10px 5px 10px;
+        }
+
+        .confirm_button {
+            background-color: #A0A0A0;
+            margin: auto auto 50px;
+            font-size: 22px;
+            color: #FFFFFF;
+        }
+
+
+        .main_btn {
+            border: 2px #A0A0A0 solid;
+            box-shadow: 0 1px 2px #A0A0A0;
+            border-radius: 10px;
+            text-align: center;
+            display: block;
+            -webkit-appearance: none;
+            opacity: 0.5;
+        }
+
+        select {
+            width: 95%;
+            background: #fff;
+            height: 22px
+            font-size: 16px;
+            line-height: 22px;
+            border: 2px #b08023 solid;
+            text-align: center;
+            padding-right: 2px;
+            -webkit-appearance: none;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="title">角色配置</div>
+        <form id = "characterParam" >
+            <div class="form">
+                <table>
+                    <tr>
+                        <td>
+                            预言家<input id="fortuneTeller" name="fortuneTeller" type="checkbox" />
+                        </td>
+                        <td>
+                            女 巫<input id="witch" name="witch" type="checkbox" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            猎 人<input id="hunter" name="hunter" type="checkbox" />
+                        </td>
+                        <td>
+                            守 卫<input id="savior" name="守卫" type="checkbox" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            平 民:
+                        </td>
+                        <td>
+                          <select id="townsFolks" name="townsFolks" >
+                              <option value="3" selected="selected">3</option>
+                              <option value="4">4</option>
+                          </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           狼 人:
+                        </td>
+                        <td>
+                          <select id="werewolves" name="townsFolks" >
+                              <option value="3" selected="selected">3</option>
+                              <option value="4">4</option>
+                          </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    <div class="btn">
+        <input type = "button" class="confirm_button main_btn" onclick="configurationObject.createRoom()" value = "确认创建"/>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/configuration.js"></script>
+</body>
+</html>
